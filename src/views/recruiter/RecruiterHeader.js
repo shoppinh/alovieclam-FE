@@ -4,11 +4,11 @@ import { NavLink as Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const Nav = styled.nav`
-  background: #000;
-  height: 80px;
+  background: #f6f6f6;
+  height: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
+  padding: 0 calc((100vw - 1000px) / 2);
   z-index: 10;
 `;
 const NavLink = styled(Link)`
@@ -16,11 +16,14 @@ const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 2rem;
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #15cdfc;
+    color: #333;
+  }
+  &:hover {
+    color: #256ce1;
   }
 `;
 
@@ -31,7 +34,6 @@ const Bars = styled(FaBars)`
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
@@ -43,6 +45,7 @@ const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
+  flex: 0.7;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -58,9 +61,8 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #256ce1;
   padding: 10px 22px;
-  color: #fff;
+  color: #333;
   border: none;
   outline: none;
   cursor: pointer;
@@ -68,23 +70,31 @@ const NavBtnLink = styled(Link)`
   text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #010606;
+    color: #fff;
   }
 `;
 const RecruiterHeader = () => {
   return (
     <div className="RecruiterHeader">
       <Nav>
-        <NavLink to="/"></NavLink>
-        <Bars>
-          <NavMenu>
-            <NavLink to="/">Giới Thiệu</NavLink>
-            <NavLink to="/">Dịch Vụ</NavLink>
-            <NavLink to="/">Báo Giá</NavLink>
-            <NavLink to="/">Liên Hệ</NavLink>
-          </NavMenu>
-        </Bars>
+        <NavLink to="/">Logo</NavLink>
+        <Bars />
+        <NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/">Giới Thiệu</NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/">Dịch Vụ</NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/">Báo Giá</NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/">Liên Hệ</NavBtnLink>
+          </NavBtn>
+        </NavMenu>
+
         <NavBtn>
           <NavBtnLink to="/">Đăng nhập</NavBtnLink>
         </NavBtn>

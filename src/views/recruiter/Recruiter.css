@@ -1,0 +1,89 @@
+.RecruiterContainer {
+}
+.Recruiter__intro {
+  position: relative;
+  height: 80vh;
+  background-image: url(../../img/RecruiterBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #65656e;
+  color: #fff;
+  text-align: center;
+}
+.Recruiter__bg {
+  background-color: rgb(42 44 49/70%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.Recruiter__bg h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+.Recruiter__bg h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #eee;
+}
+.Recruiter__action {
+  margin-top: 35px;
+}
+.Recruiter__intro .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Recruiter__info {
+}
+.block-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 40px 0;
+  color: #666;
+}
+.number {
+  font-size: 60px;
+  font-weight: 300;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #999;
+}
+.Recruiter__EnrolInfo,
+.Recruiter__Action,
+.Recruiter__SearchInfo {
+  margin-top: 100px;
+}
+.Recruiter__SearchInfo h3,
+.Recruiter__EnrolInfo h3 {
+  font-size: 36px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.Recruiter__SearchInfo p,
+.Recruiter__EnrolInfo p {
+  font-size: 18px;
+  line-height: 1.6em;
+  font-weight: 300;
+  color: #666;
+}
+.message {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.Recruiter__Action .container-fluid {
+  padding-top: 10vh;
+}
+/* #FF3366
+#4472C4
+#FF0000 */
+.Recruiter__Action {
+  height: 25vh;
+  background-color: #ff3366;
+}

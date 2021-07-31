@@ -8,7 +8,7 @@ const Nav = styled.nav`
   height: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 0 calc((100vw - 1220px) / 2);
+  padding: 0 calc((100vw - 1350px) / 2);
   z-index: 10;
 `;
 const NavLink = styled(Link)`
@@ -96,7 +96,7 @@ const DropDownMenu = styled.ul`
   color: #333;
   display: none;
   position: absolute;
-  top: 50px;
+  top: 56px;
   left: 0;
   &:before {
     content: "";
@@ -211,8 +211,34 @@ const Header = () => {
           </NavBtn>
           <NavBtn>
             <NavBtnLink to="/">Hỗ trợ và thông báo</NavBtnLink>
+            <DropDownMenu>
+              <DropDownMenuItem>
+                <DropDownMenuLink to="/">
+                  Gửi yêu cầu đến ban quản trị
+                </DropDownMenuLink>
+              </DropDownMenuItem>
+              <DropDownMenuItem>
+                <DropDownMenuLink to="/">
+                  Alo việc làm thông báo
+                </DropDownMenuLink>
+              </DropDownMenuItem>
+              <DropDownMenuItem>
+                <DropDownMenuLink to="/">Thông tin thanh toán</DropDownMenuLink>
+              </DropDownMenuItem>
+              <DropDownMenuItem>
+                <DropDownMenuLink to="/">Hướng dẫn thao tác</DropDownMenuLink>
+              </DropDownMenuItem>
+            </DropDownMenu>
           </NavBtn>
         </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/">Tài khoản</NavBtnLink>
+          <DropDownMenu>
+            <DropDownMenuItem>
+              <DropDownMenuLink to="/">Đăng xuất</DropDownMenuLink>
+            </DropDownMenuItem>
+          </DropDownMenu>
+        </NavBtn>
       </Nav>
     </div>
   );

@@ -12,10 +12,10 @@ function App() {
             <RecruiterHomepage />
           </Route>
           <Route exact path="/dang-ky">
-            <Signin />
+            <Signup />
           </Route>
           <Route exact path="/dang-nhap">
-            <Signup />
+            <Signin />
           </Route>
         </Switch>
       </BrowserRouter>

@@ -1,6 +1,6 @@
 import React from "react";
-import RecruiterHeader from "./RecruiterHeader";
-import RecruiterFooter from "./RecruiterFooter";
+const RecruiterHeader = React.lazy(() => import("./RecruiterHeader"));
+const RecruiterFooter = React.lazy(() => import("./RecruiterFooter"));
 import "./Recruiter.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";

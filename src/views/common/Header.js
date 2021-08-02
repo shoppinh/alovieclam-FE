@@ -96,7 +96,7 @@ const DropDownMenu = styled.ul`
   color: #333;
   display: none;
   position: absolute;
-  top: 56px;
+  top: 51px;
   left: 0;
   &:before {
     content: "";
@@ -146,16 +146,24 @@ const Header = () => {
             <NavBtnLink to="/">Trang chủ</NavBtnLink>
           </NavBtn>
           <NavBtn>
-            <NavBtnLink to="/">Quản lý tài khoản</NavBtnLink>
+            <NavBtnLink to="/tuyen-dung/tai-khoan">
+              Quản lý tài khoản
+            </NavBtnLink>
             <DropDownMenu>
               <DropDownMenuItem>
-                <DropDownMenuLink to="/">Tài khoản</DropDownMenuLink>
+                <DropDownMenuLink to="/tuyen-dung/tai-khoan">
+                  Tài khoản
+                </DropDownMenuLink>
               </DropDownMenuItem>
               <DropDownMenuItem>
-                <DropDownMenuLink to="/">Quản lý nhân viên</DropDownMenuLink>
+                <DropDownMenuLink to="/tuyen-dung/tai-khoan">
+                  Quản lý nhân viên
+                </DropDownMenuLink>
               </DropDownMenuItem>
               <DropDownMenuItem>
-                <DropDownMenuLink to="/">Giấy phép kinh doanh</DropDownMenuLink>
+                <DropDownMenuLink to="/tuyen-dung/tai-khoan">
+                  Giấy phép kinh doanh
+                </DropDownMenuLink>
               </DropDownMenuItem>
             </DropDownMenu>
           </NavBtn>

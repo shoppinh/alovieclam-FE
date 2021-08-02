@@ -121,7 +121,7 @@ export default function Signin() {
               </Link>
             </Grid>
             <Grid item>
-              <Link to="/dang-ky" className={classes.link}>
+              <Link to="/tuyen-dung/dang-ky" className={classes.link}>
                 {"Không có tài khoản? Đăng kí ngay"}
               </Link>
             </Grid>

@@ -1,31 +1,22 @@
 import React, { Suspense } from "react";
 const Header = React.lazy(() => import("../common/Header"));
 const Footer = React.lazy(() => import("../common/Footer"));
+const Avatar = React.lazy(() => import("./common/AvatarSection"));
+
 import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import avatar from "../../img/avatar-img.jpg";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    backgroundColor: theme.palette.background.paper,
-  },
-  navLink: {
-    textAlign: "center",
-    backgroundColor: "#FF3366",
-    color: "#fff",
-    "&:hover": {
-      backgroundColor: "grey",
-    },
-    form: {},
+  form: {},
+  formItem: {
+    margin: "5px 0",
   },
 }));
 const Account = () => {
@@ -34,57 +25,24 @@ const Account = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Header />
-      <Container component="main" maxWidth="md" style={{ paddingTop: 10 }}>
+      <Container
+        component="main"
+        maxWidth="lg"
+        style={{ paddingTop: "10vh", height: "80vh" }}
+      >
         <Grid container spacing={4}>
-          <Grid container item md={4}>
+          <Avatar />
+          <Grid
+            container
+            item
+            md={8}
+            style={{
+              border: "1px solid black",
+              boxShadow: "5px 10px 8px #888888",
+              padding: "5px 15px",
+            }}
+          >
             <Grid item md={12}>
-              <img src={avatar} alt="" style={{ width: "100%" }} />
-            </Grid>
-            <Grid item md={12}>
-              <div className={classes.root}>
-                <List component="nav" aria-label="main mailbox folders">
-                  <ListItem
-                    button
-                    component="a"
-                    href="#"
-                    className={classes.navLink}
-                  >
-                    <ListItemText primary="Thông tin tài khoản" />
-                  </ListItem>
-                  <Divider />
-                  <ListItem
-                    button
-                    component="a"
-                    href="#"
-                    className={classes.navLink}
-                  >
-                    <ListItemText primary="Thông tin công ty" />
-                  </ListItem>
-                  <Divider />
-                  <ListItem
-                    button
-                    component="a"
-                    href="#"
-                    className={classes.navLink}
-                  >
-                    <ListItemText primary="Quản lý nhân viên" />
-                  </ListItem>
-                  <Divider />
-                  <ListItem
-                    button
-                    component="a"
-                    href="#"
-                    className={classes.navLink}
-                  >
-                    <ListItemText primary="Giấy phép kinh doanh" />
-                  </ListItem>
-                  <Divider />
-                </List>
-              </div>
-            </Grid>
-          </Grid>
-          <Grid item md={8}>
-            <form className={classes.form}>
               <Typography
                 component="h2"
                 variant="h5"
@@ -95,7 +53,144 @@ const Account = () => {
               >
                 Thông tin tài khoản
               </Typography>
-            </form>
+            </Grid>
+            <Grid container item>
+              <Grid container item md={6}>
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container item md={6}>
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>{" "}
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <Typography component="h2" variant="subtitle1">
+                    Email đăng nhập :
+                  </Typography>
+                </Grid>
+                <Grid item md={10} className={classes.formItem}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Địa chỉ email"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+              </Grid>
+              <Grid container item className={classes.formItem}>
+                <Grid item>
+                  <Typography component="h2" variant="h6">
+                    Cảnh báo đăng nhập
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography component="h2" variant="subtitle1">
+                    Alo Việc Làm sẽ gửi email thông báo khi nhận thấy có địa chỉ
+                    IP hay thiết bị lạ đăng nhập và sử dụng tài khoản của quý
+                    khách
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <RadioGroup
+                    row
+                    aria-label="position"
+                    name="position"
+                    defaultValue="top"
+                  >
+                    <FormControlLabel
+                      value="on"
+                      control={<Radio color="primary" />}
+                      label="Bật"
+                      labelPlacement="start"
+                    />
+                    <FormControlLabel
+                      value="off"
+                      control={<Radio color="primary" />}
+                      label="Tắt"
+                      labelPlacement="start"
+                    />
+                  </RadioGroup>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

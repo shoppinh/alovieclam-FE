@@ -12,6 +12,9 @@ const Account = React.lazy(() => import("./views/account/Account"));
 const EmployeeManagement = React.lazy(() =>
   import("./views/account/EmployeeManagement")
 );
+const CompanyInformation = React.lazy(()=> 
+  import ("./views/account/CompanyInformation")
+)
 const License = React.lazy(() => import("./views/account/License"));
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/tuyen-dung/tai-khoan/quan-ly-nhan-vien">
               <EmployeeManagement />
+            </Route>
+            <Route exact path="/tuyen-dung/tai-khoan/thong-tin-cong-ty">
+              <CompanyInformation />
             </Route>
             <Route exact path="/tuyen-dung/tai-khoan/giay-phep">
               <License />
